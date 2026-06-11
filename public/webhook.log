@@ -1,0 +1,41 @@
+2024-12-23 10:38:58 - Recebido: Array
+(
+    [transaction_id] => 6567fb60ee78e77318d7m50fhm3p2uhb
+    [status] => PENDING
+    [amount] => 5
+    [type] => Deposit
+)
+
+2024-12-23 10:42:39 - Recebido: Array
+(
+    [transaction_id] => bced117701628c6f8104m50fmc7l5o4f
+    [status] => PENDING
+    [amount] => 1
+    [type] => Deposit
+)
+
+2024-12-23 10:44:52 - Recebido: Array
+(
+    [transaction_id] => 8868dc3fe7679ca8a943m50fp79g3e5f
+    [status] => PENDING
+    [amount] => 4
+    [type] => Deposit
+)
+
+2024-12-23 10:52:01 - Recebido: Array
+(
+    [transaction_id] => 2e79273435565c95312am50fyeae3q2h
+    [status] => PENDING
+    [amount] => 2
+    [type] => Deposit
+)
+
+2024-12-23 10:52:23 - Recebido: Array
+(
+    [transaction_id] => 2e79273435565c95312am50fyeae3q2h
+    [status] => COMPLETED
+    [amount] => 2.00
+    [fee] => 1.2
+    [net_amount] => 0.8
+)
+

@@ -1,0 +1,48 @@
+services:
+  - type: web
+    name: bet7n-cassino
+    runtime: docker
+    plan: free
+    region: ohio
+    healthCheckPath: /
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: APP_URL
+        fromService:
+          type: web
+          name: bet7n-cassino
+          property: host
+      - key: DB_CONNECTION
+        value: mysql
+      - key: DB_HOST
+        fromService:
+          type: pserv
+          name: bet7n-db
+          property: host
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_DATABASE
+        fromService:
+          type: pserv
+          name: bet7n-db
+          envKey: MYSQL_DATABASE
+      - key: DB_USERNAME
+        fromService:
+          type: pserv
+          name: bet7n-db
+          envKey: MYSQL_USER
+      - key: DB_PASSWORD
+        fromService:
+          type: pserv
+          name: bet7n-db
+          envKey: MYSQL_PASSWORD
+
+databases:
+  - name: bet7n-db
+    databaseName: bet7n_casino
+    user: bet7n_user
+    plan: free
+    region: ohio
